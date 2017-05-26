@@ -1,2 +1,5 @@
 # MATLAB temporary files
 *.m~
+
+# Files containing the MATLAB search path
+path.m
