@@ -3,3 +3,14 @@
 
 # Files containing the MATLAB search path
 path.m
+
+# MATLAB Application Build Directory
+build
+
+# Vim Swap files
+.*.swp
+
+# Java JARs. These are only part of the client to be tested, and don't
+# actually represent any JAR made by the source code. Find these jars online
+.jar
+
