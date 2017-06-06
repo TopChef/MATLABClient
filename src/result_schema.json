@@ -1,0 +1,28 @@
+{
+    "title": "The Result Schema",
+    "description": "This is what the experiment result should match",
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+        "light_count": {
+            "type": "integer",
+            "minimum": 0
+        },
+        "dark_count": {
+            "type": "integer",
+            "minimum": 0
+        },
+        "result_count": {
+            "type": "integer",
+            "minimum": 0
+        },
+        "time_completed": {
+            "type": "string",
+            "format": "date-time"
+        }
+    },
+    "required": [
+        "light_count", "dark_count", "result_count", "time_completed"
+    ]
+}
+
