@@ -1,0 +1,57 @@
+{
+    "title": "Experiment Schema for Ramsey and Rabi",
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "oneOf": [
+        {
+            "type": "object",
+            "title": "Sub-schema for a Ramsey experiment",
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "pattern": "^RAMSEY$"
+                },
+                "wait_time": {
+                    "type": "number",
+                    "minimum": 0
+                },
+                "pulse_time": {
+                    "type": "number",
+                    "minimum": 0
+                },
+                "pulse_phase": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 6.29
+                },
+                "number_of_repetitions": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "default": 1
+                }
+            },
+            "required": ["type", "wait_time", "pulse_time", "pulse_phase"]
+        },
+        {
+            "type": "object",
+            "title": "Sub-schema for a Rabi experiment",
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "pattern": "^RABI$"
+                },
+                "pulse_time": {
+                    "type": "number",
+                    "minimum": 0
+                },
+                "number_of_repetitions": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "default": 1
+                }
+            },
+            "required": ["type", "pulse_time"]
+        }
+    ]
+}
+
